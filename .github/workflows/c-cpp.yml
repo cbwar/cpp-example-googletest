@@ -17,3 +17,8 @@ jobs:
           build-dir: output
           options: |
             BUILD_TESTS=ON
+
+      - name: Test Project
+        uses: threeal/ctest-action@v1.1.0
+        with:
+          test-dir: output/tests
