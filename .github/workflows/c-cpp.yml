@@ -13,7 +13,7 @@ jobs:
       - name: Build Project
         uses: threeal/cmake-action@v2.1.0
         with:
-          source-dir: src
+          source-dir: .
           build-dir: output
           options: |
             BUILD_TESTS=ON
