@@ -16,6 +16,6 @@ clean:
 test:
 	cmake . -B$(BUILD_DIR) -DBUILD_TESTS=ON
 	cd $(BUILD_DIR) && make -j4
-	cd $(BUILD_DIR) && ctest
+	cd $(BUILD_DIR)/tests && ctest 
 
 .PHONY: all build test clean
