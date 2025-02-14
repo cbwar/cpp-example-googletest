@@ -33,12 +33,6 @@ TEST(MathTest, SumMixedElements)
     EXPECT_DOUBLE_EQ(sum(v), -3.0);
 }
 
-TEST(MathTest, FailingTest)
-{
-    std::vector<double> v = {};
-    EXPECT_DOUBLE_EQ(sum(v), 8.0);
-}
-
 int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
