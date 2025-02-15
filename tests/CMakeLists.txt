@@ -16,9 +16,7 @@ file(GLOB TEST_SOURCES "*.cpp")
 list(APPEND SHARED_LIBS math)
 
 
-foreach(TEST_SOURCE ${TEST_SOURCES})
-    get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
-    add_executable(${TEST_NAME} ${TEST_SOURCE})
-    target_link_libraries(${TEST_NAME} GTest::gtest_main ${SHARED_LIBS})
-    gtest_discover_tests(${TEST_NAME})
-endforeach()
+add_executable(runUnitTests ${TEST_SOURCES})
+target_link_libraries(runUnitTests GTest::gtest_main gcov ${SHARED_LIBS})
+# target_compile_options(runUnitTests PRIVATE -coverage)
+gtest_discover_tests(runUnitTests)

@@ -12,7 +12,7 @@ release:
 test:
 	cmake . -B$(BUILD_DIR) -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON
 	cd $(BUILD_DIR) && make -j4
-	cd $(BUILD_DIR)/tests && ctest 
+	cd $(BUILD_DIR) && Debug/bin/runUnitTests --gtest_output=xml:junit.xml
 
 clean:
 	rm -rf $(BUILD_DIR)
