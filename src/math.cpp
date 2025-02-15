@@ -3,7 +3,7 @@
 
 namespace math
 {
-    double sum(const std::vector<double>& v)
+    double sum(const std::vector<double> &v)
     {
         double sum = 0;
         for (double d : v)
